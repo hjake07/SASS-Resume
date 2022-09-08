@@ -1,0 +1,70 @@
+
+$rightbackground: rgb(189, 177, 177);
+$leftbackground: rgb(237, 234, 234);
+$textcolor: rgb(84, 79, 79);
+$opacitybackground: rgba(20, 29, 50, 0.5);
+$halves: 50%;
+@mixin include-this {
+    padding: 0;
+    margin: 0;
+}
+.myimage {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+.top {
+    @include include-this();
+    height: 200px;
+    width: 100%;
+    position: relative;
+    
+}
+.underline {
+    @include include-this();
+    height: 5px;
+    width: 40px;
+    background-color: $textcolor;
+}
+* {
+    color: $textcolor;
+}
+.left {
+    padding: 20px;
+    width: $halves;
+    background-color: $leftbackground;
+}
+.right {
+    padding: 20px;
+    width: $halves;
+    background-color: $rightbackground;
+}
+.container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+    width: 70%;
+}
+.central {
+    display: flex;
+}
+body {
+    background-image: url(whitepath.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+.absolutename {
+    background-color: $opacitybackground;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    font-size: 50px;
+}
+.absolutejob {
+    @extend .absolutename;
+    top: 66px;
+    right: 120px;
+    font-size: 25px;
+}
