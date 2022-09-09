@@ -9,15 +9,20 @@ $halves: 50%;
     margin: 0;
 }
 .myimage {
-    object-fit: cover;
-    width: 100%;
+    width: 200px;
     height: 200px;
+    object-fit: cover;
+    margin-left: 10px;
 }
 .top {
+    background-image: url(backdrop.jpg);
+    background-position: center;
+    background-size: cover;
     @include include-this();
     height: 200px;
     width: 100%;
     position: relative;
+    object-fit: cover;
     
 }
 .underline {
@@ -42,7 +47,7 @@ $halves: 50%;
 .container {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
 }
 .central {
     display: flex;
@@ -68,3 +73,14 @@ body {
     right: 120px;
     font-size: 25px;
 }
+@media screen and (max-width: 900px) {
+   .container {
+    width: 85%;
+   }
+}
+@media screen and (max-width: 600px) {
+    .container {
+     width: fit-content;
+    }
+ }
+ 
