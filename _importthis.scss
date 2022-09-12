@@ -67,6 +67,13 @@ body {
     right: 50px;
     font-size: 50px;
 }
+.email {
+    display: flex;
+}
+i {
+    align-self: center;
+    padding: 0 10px;
+}
 .absolutejob {
     @extend .absolutename;
     top: 66px;

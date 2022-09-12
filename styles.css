@@ -68,6 +68,15 @@ body {
   font-size: 50px;
 }
 
+.email {
+  display: flex;
+}
+
+i {
+  align-self: center;
+  padding: 0 10px;
+}
+
 .absolutejob {
   top: 66px;
   right: 120px;
